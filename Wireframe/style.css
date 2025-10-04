@@ -26,7 +26,15 @@ As well as useful links to learn more */
 }
 /* ====== Base Elements ======
  General rules for basic HTML elements in any context */
+html, body {
+  height: 100%;
+  margin: 0;
+ 
+}
 body {
+  display: flex;
+  flex-direction: column;
+  min-height:100vh;
   background: var(--paper);
   color: var(--ink);
   font: var(--font);
@@ -46,13 +54,18 @@ Setting the overall rules for page regions
 https://www.w3.org/WAI/tutorials/page-structure/regions/
 */
 main {
+  flex: 1;
   max-width: var(--container);
   margin: 0 auto calc(var(--space) * 4) auto;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
+  background: #f5f5f5;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  /*position: fixed;
+  bottom: 0;*/
 }
 
 
